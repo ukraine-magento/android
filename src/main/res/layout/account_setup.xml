@@ -26,7 +26,7 @@
             android:fillViewport="true"
             android:orientation="vertical"
             android:id="@+id/scroll"
-    >
+            android:background="@color/primary">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,68 +75,70 @@
             android:contentDescription="@string/auth_expired_basic_auth_toast"/>
 
             <FrameLayout
-	        android:id="@+id/hostUrlFrame"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/zero">
+                android:id="@+id/hostUrlFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/zero"
+                android:background="@color/primary">
 
                 <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/input_layout_hostUrl"
-                android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.owncloud.android.ui.components.CustomEditText
-                    android:id="@+id/hostUrlInput"
+                    android:id="@+id/input_layout_hostUrl"
+                    android:theme="@style/Nextcloud.TextInputLayout.Login"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:contentDescription="@string/auth_host_address"
-                    android:drawablePadding="@dimen/alternate_half_padding"
-                    android:inputType="textUri"
-                    android:paddingRight="@dimen/alternate_padding_right"
-                    android:paddingEnd="@dimen/alternate_padding_right"
-                    android:paddingStart="@dimen/zero"
-                    android:paddingLeft="@dimen/zero"
-                    android:textColor="@color/login_text_color"
-                    android:textColorHint="@color/login_text_color">
+                    android:layout_height="wrap_content">
 
-                    <requestFocus/>
-                </com.owncloud.android.ui.components.CustomEditText>
+                    <com.owncloud.android.ui.components.CustomEditText
+                        android:id="@+id/hostUrlInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:contentDescription="@string/auth_host_address"
+                        android:drawablePadding="@dimen/alternate_half_padding"
+                        android:inputType="textUri"
+                        android:paddingRight="@dimen/alternate_padding_right"
+                        android:paddingEnd="@dimen/alternate_padding_right"
+                        android:paddingStart="@dimen/zero"
+                        android:paddingLeft="@dimen/zero"
+                        android:textColor="@color/fg_inverse"
+                        android:textColorHint="@color/fg_inverse"
+                        android:textColorHighlight="@color/fg_inverse">
+
+                        <requestFocus/>
+                    </com.owncloud.android.ui.components.CustomEditText>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-            <ImageButton
-                android:id="@+id/testServerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|end"
-                android:layout_marginRight="@dimen/alternate_half_padding"
-                android:layout_marginEnd="@dimen/alternate_half_padding"
-                android:padding="@dimen/zero"
-                android:scaleType="fitCenter"
-                android:src="@drawable/arrow_right"
-                android:tint="@color/login_text_color"
-                android:background="@android:color/transparent"
-                android:onClick="onTestServerConnectionClick"
-                android:contentDescription="@string/test_server_button"
-                />
+                <ImageButton
+                    android:id="@+id/testServerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="@dimen/alternate_half_padding"
+                    android:layout_marginEnd="@dimen/alternate_half_padding"
+                    android:padding="@dimen/zero"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow_right"
+                    android:tint="@color/login_text_color"
+                    android:background="@android:color/transparent"
+                    android:onClick="onTestServerConnectionClick"
+                    android:contentDescription="@string/test_server_button"
+                    />
 
-            <ImageButton
-                android:id="@+id/embeddedRefreshButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|end"
-                android:layout_marginRight="@dimen/alternate_half_padding"
-                android:layout_marginEnd="@dimen/alternate_half_padding"
-                android:padding="@dimen/zero"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_action_refresh"
-                android:visibility="gone"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/auth_refresh_button"
-			    />
-		</FrameLayout>
+                <ImageButton
+                    android:id="@+id/embeddedRefreshButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="@dimen/alternate_half_padding"
+                    android:layout_marginEnd="@dimen/alternate_half_padding"
+                    android:padding="@dimen/zero"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_action_refresh"
+                    android:visibility="gone"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/auth_refresh_button"
+                    />
+		    </FrameLayout>
 
 		<TextView
             android:id="@+id/server_status_text"
