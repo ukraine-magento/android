@@ -169,11 +169,12 @@
             android:paddingLeft="@dimen/standard_half_padding"
             android:paddingRight="@dimen/list_item_share_right_margin"
             android:paddingStart="@dimen/standard_half_padding"
+            android:visibility="gone"
             android:src="@drawable/ic_unshared" />
 
         <RelativeLayout
             android:id="@+id/sharedAvatars"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:background="@color/black"
             android:layout_height="@dimen/file_icon_size"
             android:layout_centerVertical="true"
@@ -182,7 +183,30 @@
             android:layout_toEndOf="@id/sharedIcon"
             android:layout_toRightOf="@id/sharedIcon"
             android:contentDescription="@string/shared_avatar_desc"
-            android:visibility="visible" />
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/sharedAvatars1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/ic_unshared" />
+
+            <ImageView
+                android:id="@+id/sharedAvatars2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_unshared" />
+
+
+            <ImageView
+                android:id="@+id/sharedAvatars3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_unshared" />
+
+        </RelativeLayout>
 
         <ImageView
             android:id="@+id/custom_checkbox"
